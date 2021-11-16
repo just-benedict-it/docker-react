@@ -8,6 +8,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           HI Jinseo!
+          I wanna sleep.....
           
         </p>
         <a
