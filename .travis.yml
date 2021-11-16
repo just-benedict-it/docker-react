@@ -10,18 +10,18 @@ script :
 
 language: generic
 
-deploy:
-  - provider : elasticbeanstalk
-  - region : "us-east-2"
-  - app : "docker-react"
-  - env : "Dockerreact-env"
-  - bucket name : "elasticbeanstalk-us-east-2-560148726593"
-  - bucket path : "docker-react"
-  on:
-    branch: main
+# deploy:
+#   - provider : elasticbeanstalk
+#   - region : "us-east-2"
+#   - app : "docker-react"
+#   - env : "Dockerreact-env"
+#   - bucket name : "elasticbeanstalk-us-east-2-560148726593"
+#   - bucket path : "docker-react"
+#   on:
+#     branch: main
 
-  access_key_id : $AWS_ACCESS_KEY
-  secret_access_key : $AWS_SECRET_KEY
+#   access_key_id : $AWS_ACCESS_KEY
+#   secret_access_key : $AWS_SECRET_KEY
 
 
 
