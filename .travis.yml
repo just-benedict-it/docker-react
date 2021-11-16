@@ -1,6 +1,8 @@
 sudo : required
+language: generic
 
-services : docker
+services: 
+  - docker
 
 before_install :
   - docker build -t just-benedict-it/docker-react -f Dockerfile.dev .
@@ -8,16 +10,16 @@ before_install :
 script : 
   - docker run -e CI=true just-benedict-it/docker-react npm run test
 
-language: generic
+
 
 deploy:
-  provider : elasticbeanstalk
-  region : "us-east-2"
-  app : "docker-react"
-  env : "Dockerreact-env"
-  bucket_name : "elasticbeanstalk-us-east-2-560148726593"
-  bucket_path : "docker-react"
+  provider: elasticbeanstalk
+  region: 'us-east-2'
+  app: 'docker-react'
+  env: 'Dockerreact-env'
+  bucket_name: 'elasticbeanstalk-us-east-2-560148726593'
+  bucket_path: 'docker-react'
   on:
     branch: main
-  access_key_id : "$AWS_ACCESS_KEY"
-  secret_access_key : "$AWS_SECRET_KEY"
+  access_key_id : $AWS_ACCESS_KEY
+  secret_access_key : $AWS_SECRET_KEY
